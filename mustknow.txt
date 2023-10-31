@@ -1,0 +1,7 @@
+When using databases
+    1. To create tables first
+        - from flaskblog import app, db
+        - app.app_context().push()
+        db.create_all()
+
+        The following commands are done on the python shell

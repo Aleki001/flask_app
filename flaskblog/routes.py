@@ -4,7 +4,6 @@ from flaskblog.forms import RegistrationForm, LoginForm
 from flaskblog.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 
-
 posts = [
     {
         'author': 'Corey Schafer',
@@ -60,6 +59,7 @@ def login():
             return redirect(next_page) if next_page else redirect(url_for('home'))
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
+
     return render_template('login.html', title='Login', form=form)
 
 
@@ -68,8 +68,8 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
-
 @app.route("/account")
 @login_required
 def account():
     return render_template('account.html', title='Account')
+
