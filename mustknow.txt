@@ -5,3 +5,7 @@ When using databases
         db.create_all()
 
         The following commands are done on the python shell
+
+
+To add a special encoding type to form for form to pass image data properly
+            <form method="POST" action="" enctype="multipart/form-data">
